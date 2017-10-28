@@ -6,7 +6,7 @@ const AddButton = props => {
 
   return(
     <div>
-      <p>I am an Add Button</p>
+      <p>I am an AddButton</p>
     </div>
 
 
