@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FormFieldTile from './tiles/FormFieldTile'
 
 class FriendFormContainer extends Component {
   constructor(props){
@@ -13,6 +14,10 @@ class FriendFormContainer extends Component {
     return(
       <div>
         <h1>I am the FriendFormContainer</h1>
+
+        <FormFieldTile />
+        <FormFieldTile />
+        <FormFieldTile />
       </div>
 
     )

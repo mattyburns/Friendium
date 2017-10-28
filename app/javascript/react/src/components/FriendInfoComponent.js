@@ -1,4 +1,5 @@
 import React from 'react'
+import InfoTile from './tiles/InfoTile'
 
 const FriendInfoComponent = props => {
 
@@ -6,6 +7,7 @@ const FriendInfoComponent = props => {
   return(
     <div>
       <h4>I am the FriendInfoComponent</h4>
+      <InfoTile/>
     </div>
 
   )
