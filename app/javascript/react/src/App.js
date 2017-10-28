@@ -2,8 +2,12 @@ import React from 'react';
 
 const App = props => {
   return(
-    <h1>Hello World</h1>
-  )
-}
+    <div>
+      <h1>Hello World</h1>
+      <p>I love React</p>
+
+    </div>
+      )
+      }
 
 export default App
