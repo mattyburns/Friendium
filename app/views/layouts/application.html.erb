@@ -9,7 +9,11 @@
   </head>
 
   <body>
-
+    <% if current_user  %>
+    <%= link_to "Logout", logout_path %>
+    <% else %>
+    <%= link_to "Sign in with Google", "/auth/google" %>
+    <% end %>
     <div id="app"/>
     <%= javascript_pack_tag 'application' %>
     <%= yield %>
