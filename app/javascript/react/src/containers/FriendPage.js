@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import FriendInfoComponent from './components/FriendInfoComponent'
-import InteractionIndexComponent from './components/InteractionIndexComponent'
-import ControllsComponent from './components/ControllsComponent'
+import FriendInfoComponent from '../components/FriendInfoComponent'
+import InteractionIndexComponent from '../components/InteractionIndexComponent'
+import ControllsComponent from '../components/ControllsComponent'
 
 
 
