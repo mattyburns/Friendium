@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import StatsComponent from './components/StatsComponent'
-import FriendIndexContainer from './components/FriendIndexContainer'
-import ControllsComponent from './components/ControllsComponent'
+import StatsComponent from '../components/StatsComponent'
+import FriendIndexComponent from '../components/FriendIndexComponent'
+import ControllsComponent from '../components/ControllsComponent'
 
 
 class DashboardPage extends Component {
@@ -21,7 +21,7 @@ class DashboardPage extends Component {
 
         <StatsComponent/>
 
-        <FriendIndexContainer/>
+        <FriendIndexComponent/>
 
         <ControllsComponent/>
 

@@ -1,13 +1,18 @@
 import React from 'react';
+import { Router, browserHistory, Route, IndexRoute } from 'react-router';
+import NavBar from './components/NavBar';
+import DashboardPage from './containers/DashboardPage';
+import FriendPage from './containers/FriendPage';
 
 const App = props => {
   return(
-    <div>
-      <h1>Hello World</h1>
-      <p>I love React</p>
+    <Router history={browserHistory}>
+      <Route path='/' component={NavBar} >
+        <IndexRoute component={DashboardPage} />
+        <Route path= 'friend_path' component={FriendPage}/>
+      </Route>
+    </Router>
+  )
+}
 
-    </div>
-      )
-      }
-
-export default App
+export default App;
