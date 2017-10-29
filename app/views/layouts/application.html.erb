@@ -10,8 +10,20 @@
 
   <body>
 
+    <div class="sign_in_bar">
+      <ul id="sign_in_ul">
+      <% if current_user  %>
+        <li class="link"> <%= link_to "Logout", logout_path %></li>
+      <% else %>
+        <li class="link"><%= link_to "Sign in with Google", "/auth/google" %></li>
+      <% end %>
+      </ul>
+    </div>
+
     <div id="app"/>
     <%= javascript_pack_tag 'application' %>
+
     <%= yield %>
+
   </body>
 </html>

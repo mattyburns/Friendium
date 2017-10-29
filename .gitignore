@@ -23,3 +23,6 @@
 /yarn.lock
 /package-lock.json
 /.postcssrc.yml
+
+# Ignore application configuration
+/config/application.yml
