@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     namespace :v1 do
         resources :friends
         resources :interactions
+        scope :user do
+          get 'is_signed_in', to: 'user#is_signed_in?'
+        end
       end
     end
   end
