@@ -13,7 +13,7 @@ const ControllsComponent = props => {
       <AddButton/>
       <FilterButton/>
       <BackButton/>
-      <Link to='friend_path'>Friend Show Page</Link>
+      <Link to='friends/:id'>Friend Show Page</Link>
       {props.children}
     </div>
 
