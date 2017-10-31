@@ -1,12 +1,9 @@
 import React from 'react'
 
 const FriendTile = props => {
-
-
-
   return(
     <div>
-      <p>I am a FriendTile</p>
+      <p>{props.firstName} {props.lastName} {props.email}</p>
     </div>
 
 
