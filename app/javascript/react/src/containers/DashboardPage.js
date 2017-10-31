@@ -25,14 +25,15 @@ class DashboardPage extends Component {
   }
 
   render() {
-    debugger
     return(
       <div>
         <h1>I am the DashboardPage</h1>
 
         <StatsComponent/>
 
-        <FriendIndexComponent/>
+        <FriendIndexComponent
+          friends={this.state.friends}
+        />
 
         <ControllsComponent/>
 
