@@ -9,14 +9,24 @@ class FriendPage extends Component {
   constructor(props){
     super(props);
     this.state ={
-      something: ""
+      currentUser: "",
     }
   }
 
+  componentDidMount() {
+    fetch('/api/v1/user/is_signed_in.json', {
+      credentials: 'same-origin',
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then(response => response.json())
+      .then(body => {
+        this.setState({ currentUser: body.user})
+      })
+  }
 
 
   render(){
-
     return(
       <div>
         <h1>I am the FriendPage</h1>

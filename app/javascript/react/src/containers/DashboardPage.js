@@ -8,7 +8,7 @@ class DashboardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      something: ""
+      currentUser: []
     }
   }
 
@@ -27,7 +27,6 @@ class DashboardPage extends Component {
 
 
   render() {
-
     return(
       <div>
         <h1>I am the DashboardPage</h1>
