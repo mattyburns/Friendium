@@ -8,25 +8,24 @@ class DashboardPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentUser: []
+      friends: []
     }
   }
 
   componentDidMount() {
-    fetch('/api/v1/user/is_signed_in.json', {
+    fetch('/api/v1/friends', {
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     })
       .then(response => response.json())
       .then(body => {
-        this.setState({ currentUser: body.user })
+        this.setState({ friends: body.friends })
       })
   }
 
-
-
   render() {
+    debugger
     return(
       <div>
         <h1>I am the DashboardPage</h1>

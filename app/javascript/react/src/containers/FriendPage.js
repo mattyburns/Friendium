@@ -9,19 +9,20 @@ class FriendPage extends Component {
   constructor(props){
     super(props);
     this.state ={
-      currentUser: "",
+      interactions:[]
     }
   }
 
   componentDidMount() {
-    fetch('/api/v1/user/is_signed_in.json', {
+    let friendId = this.props.params.id
+    fetch(`/api/v1/friends/${friendId}`, {
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     })
       .then(response => response.json())
       .then(body => {
-        this.setState({ currentUser: body.user})
+        this.setState({ interactions: body.interactions})
       })
   }
 

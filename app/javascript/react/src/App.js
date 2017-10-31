@@ -7,7 +7,7 @@ const App = props => {
   return(
     <Router history={browserHistory}>
       <Route path='/' component={DashboardPage} />
-      <Route path= 'friend_path' component={FriendPage}/>
+      <Route exact path= '/friends/:id' component={FriendPage}/>
     </Router>
   )
 }
