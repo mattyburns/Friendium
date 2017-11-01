@@ -8,3 +8,4 @@ class Api::V1::UserController < ApplicationController
       render :json => {"signed_in" => false}
     end
   end
+end
