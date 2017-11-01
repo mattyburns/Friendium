@@ -5,10 +5,16 @@ const FriendInfoComponent = props => {
 
 
   return(
-    <div>
-      <h4>I am the FriendInfoComponent</h4>
-      <InfoTile/>
+
+  <div class="row">
+    <div class="col-2">
+      <div>
+        <h4>I am the FriendInfoComponent</h4>
+        <InfoTile/>
+      </div>
     </div>
+  </div>
+
 
   )
 }

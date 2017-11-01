@@ -8,13 +8,18 @@ const ControllsComponent = props => {
 
 
   return(
-    <div>
-      <h4>I am the ControllsComponent</h4>
-      <AddButton/>
-      <FilterButton/>
-      <BackButton/>
-      <Link to='friends/:id'>Friend Show Page</Link>
-      {props.children}
+
+    <div class="row">
+      <div class="col-4">
+        <div>
+          <h4>I am the ControllsComponent</h4>
+          <AddButton/>
+          <FilterButton/>
+          <BackButton/>
+          <Link to='friends/:id'>Friend Show Page</Link>
+          {props.children}
+        </div>
+      </div>
     </div>
 
 

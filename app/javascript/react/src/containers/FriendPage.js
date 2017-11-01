@@ -30,14 +30,15 @@ class FriendPage extends Component {
   render(){
     return(
       <div>
-        <h1>I am the FriendPage</h1>
+        <div>
+          <div>
+            <FriendInfoComponent/>
 
-        <FriendInfoComponent/>
+            <InteractionIndexComponent/>
 
-        <InteractionIndexComponent/>
-
-        <ControllsComponent/>
-
+            <ControllsComponent/>
+          </div>
+        </div>
       </div>
 
     )
