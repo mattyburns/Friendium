@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import StatsComponent from '../components/StatsComponent'
 import FriendIndexComponent from '../components/FriendIndexComponent'
 import ControllsComponent from '../components/ControllsComponent'
-import SignInMessageTile from '../components/tiles/SignInMessageTile'
+import LandingPageTile from '../components/tiles/LandingPageTile'
 
 
 class DashboardPage extends Component {
@@ -46,7 +46,7 @@ class DashboardPage extends Component {
         <FriendIndexComponent friends={this.state.friends}/>
        ];
     }else{
-      homePage = <SignInMessageTile/>
+      homePage = <LandingPageTile/>
     }
 
     return(
