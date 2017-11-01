@@ -51,10 +51,12 @@ class DashboardPage extends Component {
 
     return(
       <div>
-        <h1>I am the DashboardPage</h1>
-
-        {homePage}
-
+        <div>
+          <div>
+            <h1>I am the DashboardPage</h1>
+            {homePage}
+          </div>
+        </div>
       </div>
 
     )
