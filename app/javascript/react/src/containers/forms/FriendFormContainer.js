@@ -5,9 +5,26 @@ class FriendFormContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      something: ""
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      streetAddress: "",
+      city: "",
+      state: "",
+      zipCode: ""
     }
   }
+
+
+// include in payload "user_id", null: false
+
+
+
+
+
+
+
 
   render(){
 
@@ -15,6 +32,13 @@ class FriendFormContainer extends Component {
       <div>
         <h1>I am the FriendFormContainer</h1>
 
+        <FormFieldTile
+          firstName={this.state.firstName}
+        />
+        <FormFieldTile />
+        <FormFieldTile />
+        <FormFieldTile />
+        <FormFieldTile />
         <FormFieldTile />
         <FormFieldTile />
         <FormFieldTile />

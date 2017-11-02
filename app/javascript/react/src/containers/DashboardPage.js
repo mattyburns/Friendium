@@ -3,6 +3,7 @@ import StatsComponent from '../components/StatsComponent'
 import FriendIndexComponent from '../components/FriendIndexComponent'
 import ControllsComponent from '../components/ControllsComponent'
 import LandingPageTile from '../components/tiles/LandingPageTile'
+import FriendFormContainer from '../forms/FriendFormContainer'
 
 
 class DashboardPage extends Component {
@@ -39,35 +40,26 @@ class DashboardPage extends Component {
 
   render() {
     let homePage;
+
     if(this.state.signedIn == true){
       homePage = [
         <StatsComponent/>,
         <ControllsComponent/>,
-        <FriendIndexComponent friends={this.state.friends}/>
+        <FriendIndexComponent friends={this.state.friends}/>,
+        <FriendFormContainer currentUser={this.state.currentUser}/>
        ];
     }else{
       homePage = <LandingPageTile/>
     }
 
     return(
-      <div>
-        <div>
+
           <div>
             <h1>I am the DashboardPage</h1>
             {homePage}
           </div>
-        </div>
-      </div>
-
     )
-
   }
-
-
-
-
-
-
 }
 
 export default DashboardPage;
