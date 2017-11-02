@@ -14,10 +14,11 @@ class DashboardPage extends Component {
       currentUser: [],
       friends: []
     }
+    this.addNewFriend = this.addNewFriend.bind(this)
   }
 
   componentDidMount() {
-    fetch('/api/v1/user/is_signed_in.json',{
+    fetch('/api/v1/user/is_signed_in',{
       credentials: 'same-origin',
       method: 'GET',
       headers: {'Content-Type': 'application/json'}
@@ -38,27 +39,41 @@ class DashboardPage extends Component {
       })
   }
 
+  addNewFriend(payLoad) {
+  fetch(`/api/v1/friends`, {
+    method: 'POST',
+    body: JSON.stringify(payLoad)
+  })
+  .then(response => response.json())
+  .then(responseData =>{
+    debugger
+    this.setState({ friends: [responseData, ...this.state.friends] })
+  })
+  }
+
   render() {
     let homePage;
 
     if(this.state.signedIn == true){
-      homePage = [
-        <StatsComponent/>,
-        <ControllsComponent/>,
-        <FriendIndexComponent friends={this.state.friends}/>,
-        <FriendFormContainer currentUser={this.state.currentUser}/>
-       ];
+      return(
+        <div>
+          <StatsComponent/>
+          <ControllsComponent/>
+          <FriendIndexComponent friends={this.state.friends}/>
+          <FriendFormContainer
+            currentUser={this.state.currentUser}
+            addNewFriend={this.addNewFriend}
+          />
+        </div>
+      )
+
     }else{
-      homePage = <LandingPageTile/>
+      return(
+        <div>
+          <LandingPageTile/>
+        </div>
+      )
     }
-
-    return(
-
-          <div>
-            <h1>I am the DashboardPage</h1>
-            {homePage}
-          </div>
-    )
   }
 }
 

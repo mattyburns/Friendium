@@ -7,8 +7,8 @@ const InteractionIndexComponent = props => {
   return(
 
 
-    <div class="row">
-      <div class="col-5">
+    <div className="row">
+      <div className="col-5">
         <div>
           <h4>I am the InteractionIndexComponent</h4>
 

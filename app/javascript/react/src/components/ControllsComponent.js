@@ -9,8 +9,8 @@ const ControllsComponent = props => {
 
   return(
 
-    <div class="row">
-      <div class="col-4">
+    <div className="row">
+      <div className="col-4">
         <div>
           <h4>I am the ControllsComponent</h4>
           <AddButton/>

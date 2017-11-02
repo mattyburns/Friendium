@@ -3,7 +3,7 @@ import React from 'react'
 const FriendTile = props => {
   return(
     <div>
-      <p>{props.firstName} {props.lastName} {props.email}</p>
+      <p>{props.fullName} {props.email}</p>
     </div>
 
 
