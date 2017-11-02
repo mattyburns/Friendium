@@ -7,6 +7,7 @@ const FriendIndexComponent = props => {
     return(
       <FriendTile
         key={friend.id}
+        id={friend.id}
         fullName={friend.full_name}
         preferredName = {friend.preferred_name}
         preferredPronouns ={friend.preferred_pronouns}
@@ -28,10 +29,6 @@ const FriendIndexComponent = props => {
         </div>
       </div>
     </div>
-
-
-
-
   )
 }
 
