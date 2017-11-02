@@ -17,6 +17,7 @@ const FriendIndexComponent = props => {
         city={friend.city}
         state={friend.state}
         zipCode={friend.zip_code}
+        handleDeleteFriend={props.handleDeleteFriend}
       />
     )
   })

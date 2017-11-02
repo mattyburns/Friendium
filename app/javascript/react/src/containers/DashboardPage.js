@@ -15,6 +15,7 @@ class DashboardPage extends Component {
       friends: []
     }
     this.addNewFriend = this.addNewFriend.bind(this)
+    this.handleDeleteFriend = this.handleDeleteFriend.bind(this)
   }
 
   componentDidMount() {
@@ -46,20 +47,37 @@ class DashboardPage extends Component {
   })
   .then(response => response.json())
   .then(responseData =>{
-    debugger
     this.setState({ friends: [responseData, ...this.state.friends] })
   })
   }
 
+  handleDeleteFriend(event) {
+  let friendId = event.target.id
+  fetch(`/api/v1/friends/${friendId}`, {
+    method: 'DELETE',
+    credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(response => response.json())
+  .then(response => {
+    this.setState( {friends: response.friends} )
+  })
+}
+
   render() {
     let homePage;
+    let addNewFriend = (event) => this.addNewFriend(event)
+    let handleDeleteFriend = (event) => this.handleDeleteFriend(event)
 
     if(this.state.signedIn == true){
       return(
         <div>
           <StatsComponent/>
           <ControllsComponent/>
-          <FriendIndexComponent friends={this.state.friends}/>
+          <FriendIndexComponent
+            friends={this.state.friends}
+            handleDeleteFriend ={this.handleDeleteFriend}
+          />
           <FriendFormContainer
             currentUser={this.state.currentUser}
             addNewFriend={this.addNewFriend}

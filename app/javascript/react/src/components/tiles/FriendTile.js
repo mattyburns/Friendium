@@ -6,9 +6,8 @@ const FriendTile = props => {
     <div>
       <p>{props.fullName} {props.email}</p>
       <Link to={`/friends/${props.id}`}>Friend Show Page</Link>
+      <button id={props.id} onClick={props.handleDeleteFriend}>Delete</button>
     </div>
-
-
         )
 }
 
