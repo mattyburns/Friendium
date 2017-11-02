@@ -3,7 +3,7 @@ import StatsComponent from '../components/StatsComponent'
 import FriendIndexComponent from '../components/FriendIndexComponent'
 import ControllsComponent from '../components/ControllsComponent'
 import LandingPageTile from '../components/tiles/LandingPageTile'
-import FriendFormContainer from '../forms/FriendFormContainer'
+import FriendFormContainer from './FriendFormContainer'
 
 
 class DashboardPage extends Component {
