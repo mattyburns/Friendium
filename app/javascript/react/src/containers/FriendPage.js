@@ -31,7 +31,9 @@ class FriendPage extends Component {
   }
 
   addInteraction(payLoad) {
-    fetch(`/api/v1/interactions`, {
+    debugger
+    let friendId = this.props.params.id
+    fetch(`/api/v1/friends/${friendId}/interactions`, {
       method: 'POST',
       body: JSON.stringify(payLoad)
     })
