@@ -12,4 +12,31 @@ class Api::V1::InteractionsController < ApplicationController
     )
     render json: new_interaction
   end
+
+  def destroy
+    friend = Friend.find(params[:friend_id])
+    interaction = Interaction.find(params[:id])
+    interaction.destroy
+    render :json => {"interactions" => friend.interactions}
+  end
+
+  def edit
+    interaction = Interaction.find(params[:id])
+    render :json => {"interaction" => interaction}
+  end
+
+  def update
+    interaction = Interaction.find(params[:id])
+    interaction_update = JSON.parse(request.body.read)
+    interaction.update(
+      interaction_type: interaction_update["interactionType"],
+      notes: interaction_update["notes"],
+      date_of_interaction: interaction_update["dateOfInteraction"]
+    )
+
+    # render :json => {"interactions" => friend.interactions}
+
+  end
+
+
 end

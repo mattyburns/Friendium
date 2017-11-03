@@ -11,6 +11,8 @@ const InteractionIndexComponent = props => {
         interactionType={interaction.interaction_type}
         notes= {interaction.notes}
         dateOfInteraction={interaction.date_of_interaction}
+        handleDeleteInteraction={props.handleDeleteInteraction}
+        friendId={props.friendId}
       />
     )
   })
