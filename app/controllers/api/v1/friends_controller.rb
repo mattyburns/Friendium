@@ -42,8 +42,9 @@ class Api::V1::FriendsController < ApplicationController
   end
 
   def update
-    friend = JSON.parse(request.body.read)
-    updated_friend = Friend.update(
+    friend = Friend.find(params[:id])
+    friend_update = JSON.parse(request.body.read)
+    friend.update(
       full_name: friend["fullName"],
       preferred_name: friend["preferredName"],
       preferred_pronouns: friend["preferredPronouns"],
@@ -53,9 +54,8 @@ class Api::V1::FriendsController < ApplicationController
       city: friend["city"],
       state: friend["state"],
       zip_code: friend["zipCode"],
-      # user_id: friend["userId"]
+      user_id: friend["userId"]
     )
-    render :json => {"friend" => friend}
   end
 
   def destroy

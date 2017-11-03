@@ -10,8 +10,9 @@ const App = props => {
       <Route path='/' component={DashboardPage} />
       <Route exact path= '/friends/:id' component={FriendPage}/>
       <Route exact path= '/friends/:friend_id/interactions/:id/edit' component={InteractionEditPage} />
-      </Router>
-      )
-      }
+      <Route exact path= '/friends/:id/edit'/>
+    </Router>
+        )
+        }
 
-export default App;
+        export default App;
