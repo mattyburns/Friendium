@@ -34,8 +34,6 @@ class Api::V1::InteractionsController < ApplicationController
       date_of_interaction: interaction_update["dateOfInteraction"]
     )
 
-    # render :json => {"interactions" => friend.interactions}
-
   end
 
 
