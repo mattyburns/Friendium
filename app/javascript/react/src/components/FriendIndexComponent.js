@@ -7,30 +7,29 @@ const FriendIndexComponent = props => {
     return(
       <FriendTile
         key={friend.id}
-        firstName={friend.first_name}
-        lastName={friend.last_name}
+        id={friend.id}
+        fullName={friend.full_name}
+        preferredName = {friend.preferred_name}
+        preferredPronouns ={friend.preferred_pronouns}
         email={friend.email}
         phoneNumber={friend.phone_number}
         streetAddress={friend.street_address}
         city={friend.city}
         state={friend.state}
         zipCode={friend.zip_code}
+        handleDeleteFriend={props.handleDeleteFriend}
       />
     )
   })
   return(
-    <div class="row">
-      <div class="col-8">
+    <div className="row">
+      <div className="col-4">
         <div>
           <h4>I am the FriendIndexComponent</h4>
           {user_friends}
         </div>
       </div>
     </div>
-
-
-
-
   )
 }
 

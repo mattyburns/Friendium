@@ -6,7 +6,9 @@ const InteractionTile = props => {
 
   return(
     <div>
-      <p>I am an InteractionTile</p>
+      <p>{props.dateOfInteraction}</p>
+      <p>{props.interactionType}</p>
+      <p>{props.notes}</p>
     </div>
 
 

@@ -6,7 +6,7 @@ const InfoTile = props => {
 
   return(
     <div>
-      <p>I am an InfoTile</p>
+      <p>I am an info tile</p>
     </div>
 
 

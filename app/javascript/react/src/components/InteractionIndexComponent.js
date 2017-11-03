@@ -3,23 +3,30 @@ import InteractionTile from './tiles/InteractionTile'
 
 const InteractionIndexComponent = props => {
 
+  let user_interactions = props.interactions.map(interaction => {
+    return(
+      <InteractionTile
+        key={interaction.id}
+        id={interaction.id}
+        interactionType={interaction.interaction_type}
+        notes= {interaction.notes}
+        dateOfInteraction={interaction.date_of_interaction}
+      />
+    )
+  })
+
 
   return(
 
 
-    <div class="row">
-      <div class="col-5">
+    <div className="row">
+      <div className="col-4">
         <div>
           <h4>I am the InteractionIndexComponent</h4>
-
-          <InteractionTile/>
-          <InteractionTile/>
-          <InteractionTile/>
-          <InteractionTile/>
+          {user_interactions}
         </div>
       </div>
     </div>
-
   )
 }
 

@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 const FriendTile = props => {
   return(
     <div>
-      <p>{props.firstName} {props.lastName} {props.email}</p>
+      <p>{props.fullName} {props.email}</p>
+      <Link to={`/friends/${props.id}`}>Friend Show Page</Link>
+      <button id={props.id} onClick={props.handleDeleteFriend}>Delete</button>
+      <Link to={'/'}>Edit</Link>
+
     </div>
-
-
-  )
+        )
 }
 
 

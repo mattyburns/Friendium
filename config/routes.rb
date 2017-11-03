@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-        resources :friends
-        resources :interactions, only: [:new, :edit, :update, :destroy]
+        resources :friends, except:[:new]
+        resources :interactions, only: [:create, :edit, :update, :destroy]
         scope :user do
           get 'is_signed_in', to: 'user#is_signed_in?'
         end

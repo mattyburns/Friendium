@@ -6,8 +6,8 @@ const FriendInfoComponent = props => {
 
   return(
 
-  <div class="row">
-    <div class="col-2">
+  <div className="row">
+    <div className="col-2">
       <div>
         <h4>I am the FriendInfoComponent</h4>
         <InfoTile/>
