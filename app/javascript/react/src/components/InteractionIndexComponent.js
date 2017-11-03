@@ -20,7 +20,7 @@ const InteractionIndexComponent = props => {
 
 
     <div className="row">
-      <div className="col-5">
+      <div className="col-4">
         <div>
           <h4>I am the InteractionIndexComponent</h4>
           {user_interactions}

@@ -7,7 +7,7 @@ const StatsComponent = props => {
   return(
 
 <div className="row">
-  <div className="col-12">
+  <div className="col-4">
     <div>
       <h4>I am the StatsComponent</h4>
       <GraphTile/>

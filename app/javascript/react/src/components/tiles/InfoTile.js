@@ -6,9 +6,7 @@ const InfoTile = props => {
 
   return(
     <div>
-      <p>{props.dateOfInteraction}</p>
-      <p>{props.interactionType}</p>
-      <p>{props.notes}</p>
+      <p>I am an info tile</p>
     </div>
 
 
