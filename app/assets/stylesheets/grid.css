@@ -6,7 +6,10 @@
     margin: auto;
     margin-top: 5em;
     padding: 15px;
-    border: 1px solid red;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+    background: #FFFFFF;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
