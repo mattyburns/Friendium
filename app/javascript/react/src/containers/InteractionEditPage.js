@@ -46,7 +46,7 @@ class InteractionEditPage extends Component {
     // .then(response => response.json())
     // .then(responseData =>{
     //   // this.setState({ interactions: [responseData, ...this.state.interactions] })
-    })
+    // })
   }
 
 
