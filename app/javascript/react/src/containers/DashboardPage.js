@@ -4,6 +4,7 @@ import FriendIndexComponent from '../components/FriendIndexComponent'
 import ControllsComponent from '../components/ControllsComponent'
 import LandingPageTile from '../components/tiles/LandingPageTile'
 import FriendFormContainer from './FriendFormContainer'
+import people from '../components/images/people.png'
 
 
 class DashboardPage extends Component {
@@ -89,6 +90,9 @@ class DashboardPage extends Component {
       return(
         <div>
           <LandingPageTile/>
+          <div id="header">
+            <img src={people} alt="people" />
+          </div>
         </div>
       )
     }
