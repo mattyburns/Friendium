@@ -18,7 +18,7 @@
    width: 100%;
 }
 
-a {
+.sign_in_bar a {
    background-color: #556270;
    color: white;
    padding: 14px 25px;
@@ -31,6 +31,6 @@ a {
 
 }
 
-a:hover, a:active {
+.sign_in_bar a:hover, .sign_in_bar a:active {
    background-color: #6F7C8A;
 }
