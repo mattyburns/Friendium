@@ -43,17 +43,11 @@ class InteractionEditPage extends Component {
       method: 'PUT',
       body: JSON.stringify(payLoad)
     })
-    .then(response => response.json())
-    .then(responseData =>{
-      debugger
-      // this.setState({ interactions: [responseData, ...this.state.interactions] })
+    // .then(response => response.json())
+    // .then(responseData =>{
+    //   // this.setState({ interactions: [responseData, ...this.state.interactions] })
     })
   }
-
-  handleRedirect(){
-
-  }
-
 
 
   handleChange(event){
@@ -111,6 +105,7 @@ class InteractionEditPage extends Component {
   render(){
     let handleSubmit = (event) => this.validateSubmit(event)
     let updateInteraction = (event) => this.updateInteraction(event)
+    // might not need the above
     let errors;
     if(this.state.errors.length) {
       errors = <ErrorsTile errors={this.state.errors} />

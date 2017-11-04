@@ -45,16 +45,16 @@ class Api::V1::FriendsController < ApplicationController
     friend = Friend.find(params[:id])
     friend_update = JSON.parse(request.body.read)
     friend.update(
-      full_name: friend["fullName"],
-      preferred_name: friend["preferredName"],
-      preferred_pronouns: friend["preferredPronouns"],
-      email: friend["email"],
-      phone_number: friend["phoneNumber"],
-      street_address: friend["streetAddress"],
-      city: friend["city"],
-      state: friend["state"],
-      zip_code: friend["zipCode"],
-      user_id: friend["userId"]
+      full_name: friend_update["fullName"],
+      preferred_name: friend_update["preferredName"],
+      preferred_pronouns: friend_update["preferredPronouns"],
+      email: friend_update["email"],
+      phone_number: friend_update["phoneNumber"],
+      street_address: friend_update["streetAddress"],
+      city: friend_update["city"],
+      state: friend_update["state"],
+      zip_code: friend_update["zipCode"],
+      user_id: friend_update["userId"]
     )
   end
 

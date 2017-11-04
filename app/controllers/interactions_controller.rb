@@ -6,9 +6,11 @@ class InteractionsController < ApplicationController
   end
 
   def create
+    redirect_to root_path
   end
 
   def index
+    redirect_to root_path
   end
 
 end
