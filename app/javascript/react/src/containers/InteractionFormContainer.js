@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import FormFieldTile from '../components/tiles/FormFieldTile'
-import ErrorsTile from '../components/tiles/ErrorsTile'
+import React, { Component } from 'react';
+import DatePicker from 'react-datepicker';
+import FormFieldTile from '../components/tiles/FormFieldTile';
+import ErrorsTile from '../components/tiles/ErrorsTile';
 
 class InteractionFormContainer extends Component {
   constructor(props){
@@ -9,9 +10,12 @@ class InteractionFormContainer extends Component {
       interactionType: "",
       notes: "",
       dateOfInteraction: "",
-      errors: ""
+      errors: "",
+      startDate: ''
+
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
     this.validateContent = this.validateContent.bind(this);
     this.validateSubmit = this.validateSubmit.bind(this);
     this.handleSubmitInteraction = this.handleSubmitInteraction.bind(this);
@@ -23,6 +27,13 @@ class InteractionFormContainer extends Component {
     let newValue = event.target.value
     this.setState({[field]: newValue})
   }
+
+  handleDateChange(date){
+    this.setState({
+      startDate: date
+    });
+  }
+
 
   validateContent(selection) {
     let errors = []
@@ -94,12 +105,21 @@ class InteractionFormContainer extends Component {
             handler={this.handleChange}
           />
 
-          <FormFieldTile
+          {/* <FormFieldTile
             name="dateOfInteraction"
             content={this.state.dateOfInteraction}
             labelText="Date of interaction:"
             handler={this.handleChange}
+          /> */}
+
+          <DatePicker
+            selected={this.state.startDate}
+            onChange={this.handleDateChange}
+            showMonthDropdown
+            showYearDropdown
+            dropdownMode="select"
           />
+
 
           <input type="submit" className="button" value="Save" onClick={handleSubmit} />
         </form>
