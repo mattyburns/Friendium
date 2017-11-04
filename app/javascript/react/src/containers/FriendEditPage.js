@@ -3,7 +3,7 @@ import FormFieldTile from '../components/tiles/FormFieldTile'
 import ErrorsTile from '../components/tiles/ErrorsTile'
 import ControllsComponent from '../components/ControllsComponent'
 
-class FriendFormContainer extends Component {
+class FriendEditPage extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -16,18 +16,19 @@ class FriendFormContainer extends Component {
       city: "",
       state: "",
       zipCode: "",
-      errors: ""
+      errors: "",
+      userId: ""
     }
     this.handleChange = this.handleChange.bind(this);
     this.validateContent = this.validateContent.bind(this);
     this.validateSubmit = this.validateSubmit.bind(this);
     this.handleSubmitFriendForm = this.handleSubmitFriendForm.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
+    this.updateFriend = this.updateFriend.bind(this)
   }
 
   componentDidMount() {
     let friendId = this.props.params.id
-    debugger
     fetch(`/api/v1/friends/${friendId}/edit`, {
       credentials: 'same-origin',
       method: 'GET',
@@ -35,10 +36,29 @@ class FriendFormContainer extends Component {
     })
     .then(response => response.json())
     .then(body => {
-      debugger
-      this.setState({ fullName: body.friend.interaction})
-
+      this.setState({ fullName: body.friend.full_name})
+      this.setState({ preferredName: body.friend.preferred_name})
+      this.setState({ preferredPronouns: body.friend.preferred_pronouns})
+      this.setState({ email: body.friend.email})
+      this.setState({ phoneNumber: body.friend.phone_number})
+      this.setState({ streetAddress: body.friend.street_address})
+      this.setState({ city: body.friend.city})
+      this.setState({ state: body.friend.state})
+      this.setState({ zipCode: body.friend.zip_code})
+      this.setState({ userId: body.friend.user_id})
     })
+  }
+
+  updateFriend(payLoad) {
+    let friendId = this.props.params.id
+    fetch(`/api/v1/friends/${friendId}`, {
+      method: 'PUT',
+      body: JSON.stringify(payLoad)
+    })
+    // .then(response => response.json())
+    // .then(responseData =>{
+    //   // this.setState({ interactions: [responseData, ...this.state.interactions] })
+    // })
   }
 
   handleChange(event){
@@ -87,9 +107,9 @@ class FriendFormContainer extends Component {
       city: this.state.city,
       state: this.state.state,
       zipCode: this.state.zipCode,
-      userId: this.props.currentUser.id
+      userId: this.state.userId
     }
-    this.props.addNewFriend(friendPayload);
+    this.updateFriend(friendPayload);
   }
 
   handleClearForm(event) {
@@ -109,6 +129,8 @@ class FriendFormContainer extends Component {
 
   render(){
     let handleSubmit = (event) => this.validateSubmit(event)
+    let updateFriend = (event) => this.updateFriend(event)
+    // might not need the above
     let errors;
     if(this.state.errors.length) {
       errors = <ErrorsTile errors={this.state.errors} />
@@ -194,4 +216,4 @@ class FriendFormContainer extends Component {
   }
 }
 
-export default FriendFormContainer;
+export default FriendEditPage;

@@ -13,12 +13,6 @@ class Api::V1::InteractionsController < ApplicationController
     render json: new_interaction
   end
 
-  def destroy
-    friend = Friend.find(params[:friend_id])
-    interaction = Interaction.find(params[:id])
-    interaction.destroy
-    render :json => {"interactions" => friend.interactions}
-  end
 
   def edit
     interaction = Interaction.find(params[:id])
@@ -36,5 +30,11 @@ class Api::V1::InteractionsController < ApplicationController
 
   end
 
+  def destroy
+    friend = Friend.find(params[:friend_id])
+    interaction = Interaction.find(params[:id])
+    interaction.destroy
+    render :json => {"interactions" => friend.interactions}
+  end
 
 end
