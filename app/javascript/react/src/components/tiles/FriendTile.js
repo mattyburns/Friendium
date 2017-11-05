@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const FriendTile = props => {
   return(
-    <div>
+    <div class="friend-tile">
       <p>{props.fullName} {props.email}</p>
       <Link to={`/friends/${props.id}`}>Friend Show Page</Link>
       <button id={props.id} onClick={props.handleDeleteFriend}>Delete</button>

@@ -1,0 +1,11 @@
+
+.friend-tile{
+  background-color: red
+}
+
+
+@media all and (min-width: 480px){
+  .friend-tile{
+    background-color: blue
+  }
+}

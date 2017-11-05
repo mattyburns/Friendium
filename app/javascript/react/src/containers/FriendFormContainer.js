@@ -98,9 +98,9 @@ class FriendFormContainer extends Component {
     }
 
     return(
-      <div>
-
-        <form>
+      <div class="footer">
+        
+        <form >
           <FormFieldTile
             name="fullName"
             content={this.state.fullName}
