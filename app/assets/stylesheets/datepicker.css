@@ -18,7 +18,7 @@
   left: 50px;
 }
 
-.react-datepicker-popper {
+/* .react-datepicker-popper {
   z-index: 1;
 
   &[data-placement^="bottom"] {
@@ -54,7 +54,7 @@
       right: auto;
     }
   }
-}
+} */
 
 .react-datepicker__header {
   text-align: center;
@@ -326,7 +326,7 @@
   }
 
   &--down-arrow {
-    @extend %triangle-arrow-down;
+/*     @extend %triangle-arrow-down; */
     border-top-color: #ccc;
     float: right;
     margin-left: 20px;
