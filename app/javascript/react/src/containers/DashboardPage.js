@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import StatsComponent from '../components/StatsComponent'
 import FriendIndexComponent from '../components/FriendIndexComponent'
-import ControllsComponent from '../components/ControllsComponent'
 import LandingPageTile from '../components/tiles/LandingPageTile'
 import FriendFormContainer from './FriendFormContainer'
 import people from '../components/images/people.png'
@@ -72,9 +70,7 @@ class DashboardPage extends Component {
 
     if(this.state.signedIn == true){
       return(
-        <div className="wrapper">
-          <StatsComponent/>
-          <ControllsComponent/>
+        <div className="dashboard-page">
           <FriendIndexComponent
             friends={this.state.friends}
             handleDeleteFriend ={this.handleDeleteFriend}

@@ -24,7 +24,6 @@ const FriendIndexComponent = props => {
   return(
 
     <div className="friend-index-component">
-      <h4>I am the FriendIndexComponent</h4>
       {user_friends}
     </div>
   )
