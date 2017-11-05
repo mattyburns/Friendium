@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import FormFieldTile from '../components/tiles/FormFieldTile'
-import ErrorsTile from '../components/tiles/ErrorsTile'
-import ControllsComponent from '../components/ControllsComponent'
+import React, { Component } from 'react';
+import FormFieldTile from '../components/tiles/FormFieldTile';
+import ErrorsTile from '../components/tiles/ErrorsTile';
+import ControllsComponent from '../components/ControllsComponent';
+import TypeDropDownTile from '../components/tiles/TypeDropDownTile';
+import TextAreaTile from '../components/tiles/TextAreaTile';
 
 class InteractionEditPage extends Component {
   constructor(props){
@@ -114,24 +116,25 @@ class InteractionEditPage extends Component {
     return(
       <div>
         <form>
+
           <FormFieldTile
+            name="dateOfInteraction"
+            content={this.state.dateOfInteraction}
+            labelText="Date of interaction:"
+            handler={this.handleChange}
+          />
+          
+          <TypeDropDownTile
             name="interactionType"
             content={this.state.interactionType}
             labelText="Interaction type:"
             handler={this.handleChange}
           />
 
-          <FormFieldTile
+          <label>Notes:</label>
+          <TextAreaTile
             name="notes"
             content={this.state.notes}
-            labelText="Notes:"
-            handler={this.handleChange}
-          />
-
-          <FormFieldTile
-            name="dateOfInteraction"
-            content={this.state.dateOfInteraction}
-            labelText="Date of interaction:"
             handler={this.handleChange}
           />
 

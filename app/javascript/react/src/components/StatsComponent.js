@@ -6,7 +6,7 @@ const StatsComponent = props => {
 
   return(
 
-    <div class="main">
+    <div className="main">
       <h4>I am the StatsComponent</h4>
       <GraphTile/>
       <GraphTile/>

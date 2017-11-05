@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import FormFieldTile from '../components/tiles/FormFieldTile';
 import ErrorsTile from '../components/tiles/ErrorsTile';
+import TypeDropDownTile from '../components/tiles/TypeDropDownTile';
+import TextAreaTile from '../components/tiles/TextAreaTile';
+import moment from 'moment';
 
 class InteractionFormContainer extends Component {
   constructor(props){
@@ -9,9 +12,8 @@ class InteractionFormContainer extends Component {
     this.state = {
       interactionType: "",
       notes: "",
-      dateOfInteraction: "",
-      errors: "",
-      startDate: ''
+      dateOfInteraction: moment() ,
+      errors: ""
 
     }
     this.handleChange = this.handleChange.bind(this);
@@ -30,7 +32,7 @@ class InteractionFormContainer extends Component {
 
   handleDateChange(date){
     this.setState({
-      startDate: date
+      dateOfInteraction: date
     });
   }
 
@@ -77,7 +79,7 @@ class InteractionFormContainer extends Component {
     this.setState({
       interactionType: "",
       notes: "",
-      dateOfInteraction: "",
+      dateOfInteraction: moment(),
     })
   }
 
@@ -91,35 +93,28 @@ class InteractionFormContainer extends Component {
     return(
       <div>
         <form>
-          <FormFieldTile
-            name="interactionType"
-            content={this.state.interactionType}
-            labelText="Interaction type:"
-            handler={this.handleChange}
-          />
-
-          <FormFieldTile
-            name="notes"
-            content={this.state.notes}
-            labelText="Notes:"
-            handler={this.handleChange}
-          />
-
-          {/* <FormFieldTile
-            name="dateOfInteraction"
-            content={this.state.dateOfInteraction}
-            labelText="Date of interaction:"
-            handler={this.handleChange}
-          /> */}
-
+          <label>Date:</label>
           <DatePicker
-            selected={this.state.startDate}
+            selected={this.state.dateOfInteraction}
             onChange={this.handleDateChange}
             showMonthDropdown
             showYearDropdown
             dropdownMode="select"
           />
 
+          <TypeDropDownTile
+            name="interactionType"
+            content={this.state.interactionType}
+            labelText="Interaction type:"
+            handler={this.handleChange}
+          />
+
+          <label>Notes:</label>
+          <TextAreaTile
+            name="notes"
+            content={this.state.notes}
+            handler={this.handleChange}
+          />
 
           <input type="submit" className="button" value="Save" onClick={handleSubmit} />
         </form>
