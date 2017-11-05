@@ -6,16 +6,12 @@ const StatsComponent = props => {
 
   return(
 
-<div className="row">
-  <div className="col-4">
-    <div>
+    <div class="main">
       <h4>I am the StatsComponent</h4>
       <GraphTile/>
       <GraphTile/>
       <GraphTile/>
     </div>
-  </div>
-</div>
 
 
   )

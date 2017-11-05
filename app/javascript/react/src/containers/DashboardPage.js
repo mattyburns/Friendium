@@ -72,7 +72,7 @@ class DashboardPage extends Component {
 
     if(this.state.signedIn == true){
       return(
-        <div>
+        <div class="wrapper">
           <StatsComponent/>
           <ControllsComponent/>
           <FriendIndexComponent

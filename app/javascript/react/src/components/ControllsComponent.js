@@ -9,16 +9,13 @@ const ControllsComponent = props => {
 
   return(
 
-    <div className="row">
-      <div className="col-4">
-        <div>
+        <div class="aside-2">
           <h4>I am the ControllsComponent</h4>
           <AddButton/>
           <FilterButton/>
           <BackButton/>
         </div>
-      </div>
-    </div>
+
 
 
 
