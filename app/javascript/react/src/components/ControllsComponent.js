@@ -9,7 +9,7 @@ const ControllsComponent = props => {
 
   return(
 
-        <div class="aside-2">
+        <div className="aside-2">
           <h4>I am the ControllsComponent</h4>
           <AddButton/>
           <FilterButton/>
