@@ -10,7 +10,7 @@ const FriendTile = props => {
       <Link to={`/friends/${props.id}/edit`}>Edit</Link>
 
     </div>
-        )
+  )
 }
 
 

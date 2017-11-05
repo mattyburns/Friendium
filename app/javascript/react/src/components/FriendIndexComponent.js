@@ -23,10 +23,10 @@ const FriendIndexComponent = props => {
   })
   return(
 
-        <div className="aside-1">
-          <h4>I am the FriendIndexComponent</h4>
-          {user_friends}
-        </div>
+    <div className="friend-index-component">
+      <h4>I am the FriendIndexComponent</h4>
+      {user_friends}
+    </div>
   )
 }
 

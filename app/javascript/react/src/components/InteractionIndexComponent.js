@@ -16,19 +16,14 @@ const InteractionIndexComponent = props => {
       />
     )
   })
-
-
+  
   return(
 
-
-    <div className="row">
-      <div className="col-4">
-        <div>
-          <h4>I am the InteractionIndexComponent</h4>
-          {user_interactions}
-        </div>
-      </div>
+    <div className="interaction-index-component">
+      <h4>I am the InteractionIndexComponent</h4>
+      {user_interactions}
     </div>
+
   )
 }
 

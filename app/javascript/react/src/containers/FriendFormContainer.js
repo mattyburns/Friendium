@@ -98,7 +98,7 @@ class FriendFormContainer extends Component {
     }
 
     return(
-      <div className="footer">
+      <div className="friend-form-container">
 
         <form >
           <FormFieldTile

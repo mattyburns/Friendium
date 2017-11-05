@@ -61,7 +61,7 @@ class FriendPage extends Component {
     let addInteraction = (event) => this.addInteraction(event)
     let handleDeleteInteraction = (event) => this.handleDeleteInteraction(event)
     return(
-      <div>
+      <div className="friend-page">
         <FriendInfoComponent/>
 
         <InteractionIndexComponent
@@ -82,10 +82,6 @@ class FriendPage extends Component {
     )
   }
 }
-
-
-
-
 
 
 export default FriendPage;

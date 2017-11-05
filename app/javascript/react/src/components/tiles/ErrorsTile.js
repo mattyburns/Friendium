@@ -8,7 +8,7 @@ const ErrorsTile = props => {
   })
 
   return(
-    <ul>
+    <ul id="errors-tile">
       {formErrors}
     </ul>
   )

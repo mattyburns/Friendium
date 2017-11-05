@@ -91,7 +91,7 @@ class InteractionFormContainer extends Component {
     }
 
     return(
-      <div>
+      <div className="interaction-form-container">
         <form>
           <label>Date:</label>
           <DatePicker
