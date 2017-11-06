@@ -11,5 +11,8 @@
 .avatar{
   max-width:9%;
   min-width:9%
+}
 
+.stats-component{
+  position: fixed;
 }
