@@ -20,7 +20,7 @@ const TypeDropDownTile = props => {
   })
   return(
 
-    <div>
+    <div className="type-drop-down-tile">
       <label name={props.name}>{props.labelText}</label><br></br>
       <select onChange={props.handler} name={props.name} value={props.content}>
         {options}

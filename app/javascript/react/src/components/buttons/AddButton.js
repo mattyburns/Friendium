@@ -2,14 +2,10 @@ import React from 'react'
 
 const AddButton = props => {
 
-
-
   return(
-    <div>
+    <div className="button">
       <p>I am an AddButton</p>
     </div>
-
-
   )
 }
 

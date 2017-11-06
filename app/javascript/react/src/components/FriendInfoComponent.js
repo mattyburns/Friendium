@@ -3,19 +3,12 @@ import InfoTile from './tiles/InfoTile'
 
 const FriendInfoComponent = props => {
 
-
   return(
 
-  <div className="row">
-    <div className="col-2">
-      <div>
-        <h4>I am the FriendInfoComponent</h4>
-        <InfoTile/>
-      </div>
+    <div className="friend-info-component">
+      <h4>I am the FriendInfoComponent</h4>
+      <InfoTile/>
     </div>
-  </div>
-
-
   )
 }
 

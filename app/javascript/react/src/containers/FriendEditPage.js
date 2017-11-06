@@ -55,10 +55,6 @@ class FriendEditPage extends Component {
       method: 'PUT',
       body: JSON.stringify(payLoad)
     })
-    // .then(response => response.json())
-    // .then(responseData =>{
-    //   // this.setState({ interactions: [responseData, ...this.state.interactions] })
-    // })
   }
 
   handleChange(event){
@@ -137,7 +133,7 @@ class FriendEditPage extends Component {
     }
 
     return(
-      <div>
+      <div className="friend-edit-page">
 
         <form>
           <FormFieldTile

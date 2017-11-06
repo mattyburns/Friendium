@@ -5,7 +5,7 @@ const GraphTile = props => {
 
 
   return(
-    <div>
+    <div className="graph-tile">
       <p>I am a GraphTile</p>
     </div>
 

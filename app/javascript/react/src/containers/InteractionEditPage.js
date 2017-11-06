@@ -21,7 +21,7 @@ class InteractionEditPage extends Component {
     this.handleClearForm = this.handleClearForm.bind(this);
     this.updateInteraction = this.updateInteraction.bind(this);
   }
-// Make this an onClick function of the edit button
+  // Make this an onClick function of the edit button
   componentDidMount() {
     let friendId = this.props.params.friend_id
     let interactionId = this.props.params.id
@@ -45,10 +45,6 @@ class InteractionEditPage extends Component {
       method: 'PUT',
       body: JSON.stringify(payLoad)
     })
-    // .then(response => response.json())
-    // .then(responseData =>{
-    //   // this.setState({ interactions: [responseData, ...this.state.interactions] })
-    // })
   }
 
 
@@ -114,7 +110,7 @@ class InteractionEditPage extends Component {
     }
 
     return(
-      <div>
+      <div className="interaction-edit-page">
         <form>
 
           <FormFieldTile
@@ -123,7 +119,7 @@ class InteractionEditPage extends Component {
             labelText="Date of interaction:"
             handler={this.handleChange}
           />
-          
+
           <TypeDropDownTile
             name="interactionType"
             content={this.state.interactionType}

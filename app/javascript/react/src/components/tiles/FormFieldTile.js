@@ -3,7 +3,7 @@ import React from 'react'
 const FormFieldTile = props => {
 
   return(
-      <div>
+      <div className="form-field-tile">
         <label name={props.name}>{props.labelText}</label>
         <input type="text"
           id={props.name}
