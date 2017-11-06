@@ -16,7 +16,7 @@ const InteractionIndexComponent = props => {
       />
     )
   })
-  
+
   return(
 
     <div className="interaction-index-component">

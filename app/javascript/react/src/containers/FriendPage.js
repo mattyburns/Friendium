@@ -16,6 +16,7 @@ class FriendPage extends Component {
     this.handleDeleteInteraction = this.handleDeleteInteraction.bind(this)
   }
 
+
   componentDidMount() {
     let friendId = this.props.params.id
     fetch(`/api/v1/friends/${friendId}`, {

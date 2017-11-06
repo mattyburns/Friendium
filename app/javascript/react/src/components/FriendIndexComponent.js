@@ -18,6 +18,7 @@ const FriendIndexComponent = props => {
         state={friend.state}
         zipCode={friend.zip_code}
         handleDeleteFriend={props.handleDeleteFriend}
+        handleInteractionTimeElapse={props.handleInteractionTimeElapse}
       />
     )
   })
