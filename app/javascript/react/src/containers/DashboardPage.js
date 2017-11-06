@@ -84,7 +84,7 @@ class DashboardPage extends Component {
 
     }else{
       return(
-        <div className="dashboard-page">
+        <div className="landing-page">
           <LandingPageTile/>
           <div id="header">
             <img src={people} alt="people" />

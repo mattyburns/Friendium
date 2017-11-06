@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import FriendInfoComponent from '../components/FriendInfoComponent'
 import InteractionIndexComponent from '../components/InteractionIndexComponent'
-import ControllsComponent from '../components/ControllsComponent'
 import InteractionFormContainer from './InteractionFormContainer'
+import ControllsComponent from '../components/ControllsComponent'
 
 
 
@@ -62,21 +61,16 @@ class FriendPage extends Component {
     let handleDeleteInteraction = (event) => this.handleDeleteInteraction(event)
     return(
       <div className="friend-page">
-        <FriendInfoComponent/>
-
         <InteractionIndexComponent
           interactions={this.state.interactions}
           handleDeleteInteraction={this.handleDeleteInteraction}
           friendId={this.props.params.id}
-
         />
-
-        <ControllsComponent/>
-
         <InteractionFormContainer
           friendId={this.props.params.id}
           addInteraction={this.addInteraction}
         />
+        <ControllsComponent/>
       </div>
 
     )
