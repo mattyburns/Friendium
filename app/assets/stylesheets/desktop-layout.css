@@ -13,6 +13,16 @@
   min-width:9%
 }
 
+
+/*change this element to live on the right with the three graphs*/
+
 .stats-component{
-  position: fixed;
+  width: 25%;
+  height: auto;
+  /*position: fixed;*/
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 }
