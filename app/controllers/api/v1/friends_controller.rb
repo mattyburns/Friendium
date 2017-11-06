@@ -13,7 +13,7 @@ class Api::V1::FriendsController < ApplicationController
   def show
     if current_user
       friend = Friend.find(params[:id])
-      render :json => {"friend" => friend, "interactions" => friend.interactions}
+      render :json => {"friend" => friend, "interactions" => friend.interactions.by_date}
     else
       render :json => {"signed_in" => false}
     end
