@@ -91,11 +91,10 @@ class DashboardPage extends Component {
     let addNewFriend = (event) => this.addNewFriend(event)
     let handleDeleteFriend = (event) => this.handleDeleteFriend(event)
     let handleFriendshipStats = (event) => this.handleFriendshipStats(event)
-
+    let charts;
     let data;
-    if(this.state.interactionTypeStats == ""){
-      data = [["Interaction type","# of interactions"],
-      ["Friendship", 1]]
+    if(this.state.interactionTypeStats == "" ){
+      charts = <p></p>
     }else{
       data = [
         ["Interaction type","# of interactions"],
@@ -109,6 +108,7 @@ class DashboardPage extends Component {
         ["Day Visits",this.state.interactionTypeStats.dayVisit],
         ["Multi-day Visits",this.state.interactionTypeStats.multiVisit],
       ]
+      charts = <GoogleCharts data={data}/>
     }
 
     if(this.state.signedIn == true){
@@ -124,9 +124,7 @@ class DashboardPage extends Component {
             handleDeleteFriend ={this.handleDeleteFriend}
             handleFriendshipStats ={this.handleFriendshipStats}
           />
-          <GoogleCharts
-            data={data}
-          />
+          {charts}
         </div>
       )
 
