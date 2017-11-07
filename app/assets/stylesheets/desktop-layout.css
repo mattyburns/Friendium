@@ -1,4 +1,6 @@
 .friend-tile{
+  float:auto;
+  width: 25%;
   padding: 30px;
   background: #FFFFFF;
   margin: 50px auto;
@@ -7,19 +9,40 @@
   -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 }
 
-
 .avatar{
   max-width:9%;
   min-width:9%
 }
 
-
-/*change this element to live on the right with the three graphs*/
+.interaction-tile{
+  float:auto;
+  width: 25%;
+  padding: 30px;
+  background: #FFFFFF;
+  margin: 50px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
 
 .stats-component{
+  right:0;
+  position: fixed;
   width: 25%;
   height: auto;
-  /*position: fixed;*/
+  float:right;
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+#friend-form{
+  position: fixed;
+  float: left;
+  font-family: 'Open Sans Condensed', arial, sans;
+  width: 25%;
   padding: 30px;
   background: #FFFFFF;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);

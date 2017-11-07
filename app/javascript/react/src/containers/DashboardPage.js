@@ -89,14 +89,14 @@ class DashboardPage extends Component {
       return(
         <div className="dashboard-page">
           <StatsComponent daysSinceLastInteraction ={this.state.daysSinceLastInteraction}/>
+          <FriendFormContainer
+            currentUser={this.state.currentUser}
+            addNewFriend={this.addNewFriend}
+          />
           <FriendIndexComponent
             friends={this.state.friends}
             handleDeleteFriend ={this.handleDeleteFriend}
             handleInteractionTimeElapse ={this.handleInteractionTimeElapse}
-          />
-          <FriendFormContainer
-            currentUser={this.state.currentUser}
-            addNewFriend={this.addNewFriend}
           />
         </div>
       )
