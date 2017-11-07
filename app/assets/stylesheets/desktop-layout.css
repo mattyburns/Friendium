@@ -49,3 +49,8 @@
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 }
+
+.landing-page img{
+  width: 100%;
+
+}
