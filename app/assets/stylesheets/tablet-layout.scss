@@ -1,12 +1,16 @@
-// @media only screen and (min-device-width : 480px) and (max-device-width : 1200px) {
+@media only screen and (min-device-width : 480px) and (max-device-width : 1200px) {
+
+  .landing-page-tile{
+    font-size: 3em;
+  }
 //
 //   .sign_in_bar{
 //     width:100%;
 //   }
 //
-//   ul#sign_in_ul{
-//     font-size: 3em;
-//   }
+  ul#sign_in_ul{
+    font-size: 3em;
+  }
 //
 //   .dashboard-page{
 //     width: auto;
@@ -110,4 +114,4 @@
 //     cursor: pointer;
 //   }
 //
-// }
+}

@@ -54,3 +54,11 @@
   width: 100%;
 
 }
+
+ul#sign_in_ul{
+  font-size: 1em;
+}
+
+.landing-page-tile{
+  font-size: 1.5em;
+}
