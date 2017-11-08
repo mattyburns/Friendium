@@ -100,7 +100,7 @@ class FriendFormContainer extends Component {
     return(
       <div className="friend-form-container">
 
-        <form >
+        <form id="friend-form" >
           <FormFieldTile
             name="fullName"
             content={this.state.fullName}

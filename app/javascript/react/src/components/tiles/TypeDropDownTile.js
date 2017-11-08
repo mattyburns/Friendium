@@ -8,7 +8,7 @@ const TypeDropDownTile = props => {
   [3,"Letter/Card"],
   [4,"Package"],
   [5,"Phone call"],
-  [6,"In person conversation"],
+  [6,"In-person conversation"],
   [7,"Coffee/Meal"],
   [8,"Day Visit"],
   [9,"Multi-day visit"]]

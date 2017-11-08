@@ -92,7 +92,7 @@ class InteractionFormContainer extends Component {
 
     return(
       <div className="interaction-form-container">
-        <form>
+        <form id="interaction-form">
           <label>Date:</label>
           <DatePicker
             selected={this.state.dateOfInteraction}

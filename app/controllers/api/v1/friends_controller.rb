@@ -13,10 +13,46 @@ class Api::V1::FriendsController < ApplicationController
   def show
     if current_user
       friend = Friend.find(params[:id])
-      interaction_dates = friend.interactions.by_date
-      most_recent_interaction = interaction_dates.first.date_of_interaction
+      interactions_by_date = friend.interactions.by_date
+
+      social_media_post= 0
+      text= 0
+      letter_card= 0
+      package= 0
+      phone_call = 0
+      in_person= 0
+      coffee= 0
+      day_visit = 0
+      multi_visit = 0
+
+      interactions_by_date.each do |interaction|
+        if interaction.interaction_type == "Social media post"
+          social_media_post += 1
+        elsif interaction.interaction_type == "Text"
+          text += 1
+        elsif interaction.interaction_type == "Letter/Card"
+          letter_card += 1
+        elsif interaction.interaction_type == "Package"
+          package += 1
+        elsif interaction.interaction_type == "Phone call"
+          phone_call += 1
+        elsif interaction.interaction_type == "In person conversation"
+          in_person += 1
+        elsif interaction.interaction_type == "Coffee/Meal"
+          coffee += 1
+        elsif interaction.interaction_type == "Day visit"
+          day_visit += 1
+        elsif interaction.interaction_type == "Multi-day visit"
+          multi_visit += 1
+        end
+      end
+
+      interaction_type_stats = {socialMedia: social_media_post, text:text, letterCard: letter_card, package: package, phoneCall: phone_call, inPerson: in_person, coffee:coffee, dayVisit:day_visit, multiVisit:multi_visit}
+
+
+      most_recent_interaction = interactions_by_date.first.date_of_interaction
       days_since_last_interaction = ((most_recent_interaction) - (Date.today)).to_i
-      render :json => {"friend" => friend, "interactions" => friend.interactions.by_date, "most_recent_interaction" => most_recent_interaction, "days_since_last_interaction" => days_since_last_interaction}
+      render :json => {"friend" => friend, "interactions" => friend.interactions.by_date, "most_recent_interaction" => most_recent_interaction, "days_since_last_interaction" => days_since_last_interaction, "interactionTypeStats" => interaction_type_stats}
     else
       render :json => {"signed_in" => false}
     end
