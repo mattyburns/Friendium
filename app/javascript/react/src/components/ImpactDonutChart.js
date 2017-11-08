@@ -5,7 +5,6 @@ import { Chart } from 'react-google-charts';
 const ImpactDonutChart = props =>{
   return(
     <div>
-      <h2>Donut Chart</h2>
       <Chart
         chartType="PieChart"
         data={props.data}

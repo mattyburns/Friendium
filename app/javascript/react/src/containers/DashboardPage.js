@@ -5,6 +5,8 @@ import FriendFormContainer from './FriendFormContainer'
 import StatsComponent from '../components/StatsComponent'
 import people from '../components/images/people.png'
 import GoogleCharts from './ChartsContainer'
+import add from '../components/images/add.png'
+import ControllsComponent from '../components/ControllsComponent'
 
 
 class DashboardPage extends Component {
@@ -16,12 +18,13 @@ class DashboardPage extends Component {
       friends: [],
       daysSinceLastInteraction:"",
       interactionTypeStats:"",
-      test: 5
+      addFriend: false
 
     }
     this.addNewFriend = this.addNewFriend.bind(this)
     this.handleDeleteFriend = this.handleDeleteFriend.bind(this)
     this.handleFriendshipStats = this.handleFriendshipStats.bind(this)
+    this.handleFormToggle = this.handleFormToggle.bind(this)
   }
 
   componentDidMount() {
@@ -84,6 +87,14 @@ class DashboardPage extends Component {
     })
   }
 
+  handleFormToggle(event){
+    if (this.state.addFriend == false){
+      this.setState({addFriend: true})
+    }else {
+      this.setState({addFriend:false})
+    }
+  }
+
 
 
   render() {
@@ -91,6 +102,7 @@ class DashboardPage extends Component {
     let addNewFriend = (event) => this.addNewFriend(event)
     let handleDeleteFriend = (event) => this.handleDeleteFriend(event)
     let handleFriendshipStats = (event) => this.handleFriendshipStats(event)
+    let handleFormToggle = (event) => this.handleFormToggle(event)
     let charts;
     let data;
     if(this.state.interactionTypeStats == "" ){
@@ -108,23 +120,39 @@ class DashboardPage extends Component {
         ["Day Visits",this.state.interactionTypeStats.dayVisit],
         ["Multi-day Visits",this.state.interactionTypeStats.multiVisit],
       ]
-      charts = <GoogleCharts data={data}/>
+      charts = <GoogleCharts data={data}
+        daysSinceLastInteraction={this.state.daysSinceLastInteraction}/>
     }
+
+    let friendForm;
+    if(this.state.addFriend == true){
+      friendForm=<FriendFormContainer
+        currentUser={this.state.currentUser}
+        addNewFriend={this.addNewFriend}/>
+    }else {
+      friendForm=<p></p>
+    }
+
+
 
     if(this.state.signedIn == true){
       return(
-        <div className="dashboard-page">
-          <StatsComponent daysSinceLastInteraction ={this.state.daysSinceLastInteraction}/>
-          <FriendFormContainer
-            currentUser={this.state.currentUser}
-            addNewFriend={this.addNewFriend}
-          />
-          <FriendIndexComponent
-            friends={this.state.friends}
-            handleDeleteFriend ={this.handleDeleteFriend}
-            handleFriendshipStats ={this.handleFriendshipStats}
-          />
-          {charts}
+        <div>
+          <div className="small-12 large-4 columns">
+            {charts}
+          </div>
+
+          <div className=" small-12 large-6 columns">
+            <FriendIndexComponent
+              friends={this.state.friends}
+              handleDeleteFriend ={this.handleDeleteFriend}
+              handleFriendshipStats ={this.handleFriendshipStats}
+            />
+          </div>
+          <div className="small-12 large-6 columns">
+            {friendForm}
+            <img onClick={handleFormToggle} src={add} alt="add a new friend"/>
+          </div>
         </div>
       )
 

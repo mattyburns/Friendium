@@ -11,13 +11,9 @@ const StatsComponent = props => {
 
   return(
 
-    <div className="stats-component">
+    <div>
       <p>Days since last interaction with friend:{props.daysSinceLastInteraction}</p>
-      <div>
-        <GraphTile/>
-        <GraphTile/>
-        <GraphTile/>
-      </div>
+
     </div>
   )
 }

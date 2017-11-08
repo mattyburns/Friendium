@@ -205,8 +205,6 @@ class FriendEditPage extends Component {
           {errors}
         </div>
 
-        <ControllsComponent/>
-
       </div>
     )
   }
