@@ -8,9 +8,7 @@ const ControllsComponent = props => {
 
   return(
     <div className="controlls-component">
-      <h4>I am the ControllsComponent</h4>
-      <AddButton/>
-      <FilterButton/>
+      
       <BackButton/>
     </div>
   )

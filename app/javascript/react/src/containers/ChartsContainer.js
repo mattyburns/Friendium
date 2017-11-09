@@ -8,12 +8,12 @@ import ImpactDonutChart from '../components/ImpactDonutChart'
 const ChartsContainer = props =>{
   return(
     <div className="chart-container">
-      <h1>GOOGLE CHARTS EXAMPLES</h1>
       <div>
         <ImpactDonutChart
           data={props.data}
         />
       </div>
+      <h4># of days since last interaction: {props.daysSinceLastInteraction}</h4>
     </div>
   );
 }

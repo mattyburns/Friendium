@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import FormFieldTile from '../components/tiles/FormFieldTile'
 import ErrorsTile from '../components/tiles/ErrorsTile'
+import ControllsComponent from '../components/ControllsComponent'
 
 class FriendFormContainer extends Component {
   constructor(props){
@@ -170,6 +171,7 @@ class FriendFormContainer extends Component {
           {errors}
         </div>
 
+        <ControllsComponent/>
       </div>
     )
   }
