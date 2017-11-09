@@ -20,4 +20,34 @@
    margin: 0;
    padding: 0;
    background-color:#EEEEF0;
+   font-family: 'Roboto', sans-serif;
  }
+
+ h1{
+   font-family: 'Kurale', serif;
+   color: white;
+
+ }
+
+.button{
+  font-family: 'Kurale', serif;
+  background-color: #536272;
+}
+
+a{
+  font-family: 'Kurale', serif;
+  background-color: #536272;
+}
+
+.landing-page-tile{
+  margin-left:1.5em;
+  margin-top: 4em;
+}
+
+.message{
+  color:white;
+  font-family: 'Kurale', serif;
+  margin-top: 10em;
+  margin-left: .5em;
+
+}

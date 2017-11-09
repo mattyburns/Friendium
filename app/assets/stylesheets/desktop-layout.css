@@ -10,6 +10,7 @@
 }
 
 .avatar{
+  border-radius: 100px;
   max-width:30%;
   min-width:30%
 }
@@ -50,14 +51,19 @@
 }
 
 .landing-page img{
+  position: absolute;
+  margin-top: 4.5em;
   width: 100%;
 
 }
 
-ul#sign_in_ul{
-  font-size: 1em;
+.landing-page-tile{
+  z-index: 100;
+  position: absolute;
+  margin-top: 3.5em;
+  font-size: 1.5em;
 }
 
-.landing-page-tile{
-  font-size: 1.5em;
+ul#sign_in_ul{
+  font-size: 1em;
 }

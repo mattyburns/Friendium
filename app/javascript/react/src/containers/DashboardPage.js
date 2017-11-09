@@ -3,10 +3,10 @@ import FriendIndexComponent from '../components/FriendIndexComponent'
 import LandingPageTile from '../components/tiles/LandingPageTile'
 import FriendFormContainer from './FriendFormContainer'
 import StatsComponent from '../components/StatsComponent'
-import people from '../components/images/people.png'
 import GoogleCharts from './ChartsContainer'
 import add from '../components/images/add.png'
 import ControllsComponent from '../components/ControllsComponent'
+import heart from '../components/images/heart.png'
 
 
 class DashboardPage extends Component {
@@ -161,7 +161,7 @@ class DashboardPage extends Component {
         <div className="landing-page">
           <LandingPageTile/>
           <div id="header">
-            <img src={people} alt="people" />
+            <img src={heart} alt="heart" />
           </div>
         </div>
       )

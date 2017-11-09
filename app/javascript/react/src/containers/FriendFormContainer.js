@@ -164,14 +164,13 @@ class FriendFormContainer extends Component {
             labelText="Zip code:"
             handler={this.handleChange}
           />
-          <input type="submit" className="button" value="Save" onClick={handleSubmit} />
+          <input type="submit" className="button round" value="Save" onClick={handleSubmit} />
         </form>
 
         <div>
           {errors}
         </div>
-
-        <ControllsComponent/>
+        
       </div>
     )
   }
