@@ -29,21 +29,20 @@
 
  }
 
+ h3{
+   font-family: 'Kurale', serif;
+
+ }
+
 .button{
   font-family: 'Kurale', serif;
   background-color: #017398;
 }
 
 .button-group{
-  margin-left: .1em;
+  margin-left: .3em;
 }
 
-
-/*a{
-  font-family: 'Kurale', serif;
-  background-color: #017398;
-  border-radius: 2px;
-}*/
 
 .landing-page-tile{
   margin-left:1.5em;
@@ -58,11 +57,11 @@
 }
 
 .friend-tile{
-  border-radius: 2px;
   float:auto;
-  width: 85%;
+  width: 100%;
   background: #FFFFFF;
   margin: 15px auto;
+  padding: 30px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -72,6 +71,7 @@
   max-width:30%;
   min-width:30%;
   border-radius: 200px;
+  margin-left: 7em;
 
 }
 
