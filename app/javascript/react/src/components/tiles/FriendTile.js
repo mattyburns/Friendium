@@ -1,25 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router';
-import friend from '../images/friend.png'
+import face from '../images/face.png'
 
 const FriendTile = props => {
   return(
-
-//figure out mouse over div- change size of div
-
     <div className="friend-tile" id={props.id}>
-      <img onClick={props.handleFriendshipStats} className="avatar" id={props.id} src={friend}></img>
 
-      <p>Full name: {props.fullName}</p>
-      <p>Pronouns: {props.preferredPronouns}</p>
+
+      <h3>{props.fullName}</h3>
+
+      <p>{props.preferredPronouns}</p>
       <p>Contact info: {props.phoneNumber}, {props.email}</p>
 
-      <Link  className="button round" id="wanna-be-button" to={`/friends/${props.id}`}>Friendship History</Link>
-        <button className="button round" id={props.id} onClick={props.handleDeleteFriend}>Delete</button>
-        <Link className="button round" id="wanna-be-button" to={`/friends/${props.id}/edit`}>Edit</Link>
-
-
-    </div>
+      <ul className="button-group round">
+        <li><Link  className="button small" to={`/friends/${props.id}`}>Friendship History</Link>
+        </li>
+        <li>
+          <Link className="button small"  to={`/friends/${props.id}/edit`}>Edit</Link>
+        </li>
+        <li>
+          <Link className="button small" id={props.id} onClick={props.handleDeleteFriend}>Delete</Link>
+        </li>
+      </ul>
+      <img onClick={props.handleFriendshipStats} className="avatar" id={props.id} src={face}></img>
+      </div>
   )
 }
 

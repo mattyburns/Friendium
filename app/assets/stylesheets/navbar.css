@@ -19,9 +19,10 @@
 }
 
 .sign_in_bar a {
-   background-color: #556270;
+   background-color:#017398 ;
    color: white;
    padding: 14px 25px;
+   font-family: 'Kurale', serif;
    text-align: center;
    text-decoration: none;
    display: inline-block;

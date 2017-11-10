@@ -7,8 +7,14 @@ const InteractionTile = props => {
       <p>{props.dateOfInteraction}</p>
       <p>{props.interactionType}</p>
       <p>{props.notes}</p>
-      <button id={props.id} name={props.friendId} onClick={props.handleDeleteInteraction}>Delete</button>
-      <Link to={`/friends/${props.friendId}/interactions/${props.id}/edit`}>Edit</Link>
+      <ul className="button-group round">
+        <li>
+          <Link className="button" to={`/friends/${props.friendId}/interactions/${props.id}/edit`}>Edit</Link>
+        </li>
+        <li>
+          <Link className="button" id={props.id} name={props.friendId} onClick={props.handleDeleteInteraction}>Delete</Link>
+        </li>
+      </ul>
     </div>
 
   )
