@@ -1,20 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router'
+import trash from '../images/trash.png'
+import edit from '../images/edit.png'
 
 const InteractionTile = props => {
   return(
     <div className="interaction-tile">
-      <p>{props.dateOfInteraction}</p>
-      <p>{props.interactionType}</p>
-      <p>{props.notes}</p>
-      <ul className="button-group round">
-        <li>
-          <Link className="button" to={`/friends/${props.friendId}/interactions/${props.id}/edit`}>Edit</Link>
-        </li>
-        <li>
-          <Link className="button" id={props.id} name={props.friendId} onClick={props.handleDeleteInteraction}>Delete</Link>
-        </li>
-      </ul>
+      <p>Date: {props.dateOfInteraction}</p>
+      <p>Type: {props.interactionType}</p>
+      <p>Notes: {props.notes}</p>
+
+      <Link  to={`/friends/${props.friendId}/interactions/${props.id}/edit`}>
+        <img className="edit interaction" src={edit} ></img>
+      </Link>
+      
+      <Link >
+        <img className="trash interaction" onClick={props.handleDeleteInteraction} id={props.id} name={props.friendId} src={trash} ></img>
+      </Link>
+
     </div>
 
   )

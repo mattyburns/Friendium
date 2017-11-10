@@ -1,29 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router';
-import face from '../images/face.png'
+import heart from '../images/heart.png'
+import trash from '../images/trash.png'
+import edit from '../images/edit.png'
+import hands from '../images/hands.png'
 
 const FriendTile = props => {
   return(
     <div className="friend-tile" id={props.id}>
-
-
       <h3>{props.fullName}</h3>
 
-      <p>{props.preferredPronouns}</p>
-      <p>Contact info: {props.phoneNumber}, {props.email}</p>
+      <ul>
+        <li>Phone: {props.phoneNumber}</li>
+        <li>Email: {props.email}</li>
+        <li>Pronouns: {props.preferredPronouns} </li>
+        <li>Address: {props.streetAddress}<br></br> {props.city}  {props.state} {props.zipCode}</li>
 
-      <ul className="button-group round">
-        <li><Link  className="button small" to={`/friends/${props.id}`}>Friendship History</Link>
-        </li>
-        <li>
-          <Link className="button small"  to={`/friends/${props.id}/edit`}>Edit</Link>
-        </li>
-        <li>
-          <Link className="button small" id={props.id} onClick={props.handleDeleteFriend}>Delete</Link>
-        </li>
       </ul>
-      <img onClick={props.handleFriendshipStats} className="avatar" id={props.id} src={face}></img>
-      </div>
+
+
+      <Link to={`/friends/${props.id}`}>
+        <img className="hands" src={hands} ></img>
+      </Link>
+
+      <img onClick={props.handleFriendshipStats} className="heart" id={props.id} src={heart}></img>
+
+      <Link to={`/friends/${props.id}/edit`}>
+        <img className="edit" src={edit}></img>
+      </Link>
+
+      <img className="trash" id={props.id} onClick={props.handleDeleteFriend} src={trash}></img>
+
+    </div>
   )
 }
 
