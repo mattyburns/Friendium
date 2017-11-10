@@ -8,7 +8,7 @@ const ImpactDonutChart = props =>{
       <Chart
         chartType="PieChart"
         data={props.data}
-        options={{pieHole:0.4}}
+        options={{pieHole:0.4, title: "Interactions by type:" }}
         graphId="PieChart"
         width="100%"
         height="400px"
