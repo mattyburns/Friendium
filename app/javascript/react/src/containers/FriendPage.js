@@ -62,13 +62,13 @@ class FriendPage extends Component {
     let handleDeleteInteraction = (event) => this.handleDeleteInteraction(event)
     return(
       <div className="friend-page">
-        <div className="small-12 small-centered large-4 columns">
+        <div className="small-12 small-centered medium-8 large-4 columns">
           <InteractionIndexComponent
             interactions={this.state.interactions}
             handleDeleteInteraction={this.handleDeleteInteraction}
             friendId={this.props.params.id}
           />
-          <div className="small-12 small-centered ">
+          <div>
             <InteractionFormContainer
               friendId={this.props.params.id}
               addInteraction={this.addInteraction}

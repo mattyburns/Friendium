@@ -1,6 +1,115 @@
-// @media only screen and (min-device-width : 480px) and (max-device-width : 1200px) {
-//
-//
-//
-//
-// }
+@media only screen and (min-device-width : 480px) and (max-device-width : 1200px) {
+
+  .logo{
+    width: 100%;
+    margin-top: 1em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  .getting-started{
+    float: right;
+  }
+
+  .friend-tile{
+    float:auto;
+    width: 100%;
+    background: #FFFFFF;
+    margin: 15px auto;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+
+  .interaction-tile{
+    float:auto;
+    width: 100%;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 15px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  #friend-form{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: auto;
+    padding: 30px;
+    margin-right: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+
+
+  #instructions.message{
+    margin-left: 1em;
+    margin-top: 9em;
+  }
+
+  ul#sign_in_ul{
+    font-size: 1em;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  .hands{
+    max-width:25%;
+    min-width:25%;
+    border-radius: 200px;
+  }
+
+  .edit{
+    max-width:25%;
+    min-width:25%;
+    border-radius: 200px;
+
+  }
+
+  .edit.interaction{
+    margin-left: 5em;
+  }
+
+
+  .trash{
+    max-width:25%;
+    min-width:25%;
+    border-radius: 200px;
+  }
+
+  .heart{
+    max-width:25%;
+    min-width:25%;
+    border-radius: 200px;
+  }
+
+    .avatar{
+      max-width:30%;
+      min-width:30%;
+      border-radius: 200px;
+      margin-left: 7em;
+      margin-bottom: 1em;
+    }
+
+  .getting-started{
+    float: right;
+  }
+
+  .chart-container{
+    margin-top: 1em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
+
+
+
+}
