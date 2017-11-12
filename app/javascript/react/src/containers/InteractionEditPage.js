@@ -111,9 +111,9 @@ class InteractionEditPage extends Component {
     }
 
     return(
-      <div className="interaction-edit-page">
+      <div className="interaction-edit-page large-8 large-centered columns ">
         <form>
-
+          
           <FormFieldTile
             name="dateOfInteraction"
             content={this.state.dateOfInteraction}

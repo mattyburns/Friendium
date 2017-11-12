@@ -138,18 +138,18 @@ class DashboardPage extends Component {
     if(this.state.signedIn == true){
       return(
         <div>
-          <div className="small-12 large-4 columns">
+          <div className="small-12 small-centered large-12 columns">
             {charts}
           </div>
 
-          <div className=" small-12 large-6 columns">
+          <div className="small-12 small-centered large-4 columns">
             <FriendIndexComponent
               friends={this.state.friends}
               handleDeleteFriend ={this.handleDeleteFriend}
               handleFriendshipStats ={this.handleFriendshipStats}
             />
           </div>
-          <div className="small-12 large-6 columns">
+          <div className="small-12 small-centered large-4 columns">
             {friendForm}
             <img onClick={handleFormToggle} src={add} alt="add a new friend"/>
           </div>
@@ -158,7 +158,7 @@ class DashboardPage extends Component {
 
     }else{
       return(
-        <div className="landing-page">
+        <div className="landing-page small-12 small-centered columns">
           <LandingPageTile/>
           <div id="header">
             <img src={heart} alt="heart" />
