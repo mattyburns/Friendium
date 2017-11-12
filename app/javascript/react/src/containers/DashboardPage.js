@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import FriendIndexComponent from '../components/FriendIndexComponent'
-import LandingPageTile from '../components/tiles/LandingPageTile'
 import FriendFormContainer from './FriendFormContainer'
 import StatsComponent from '../components/StatsComponent'
 import GoogleCharts from './ChartsContainer'
 import add from '../components/images/add.png'
 import ControllsComponent from '../components/ControllsComponent'
-import heart from '../components/images/heart.png'
+import heart_logo from '../components/images/heart_logo.png'
 
 
 class DashboardPage extends Component {
@@ -133,23 +132,21 @@ class DashboardPage extends Component {
       friendForm=<p></p>
     }
 
-
-
     if(this.state.signedIn == true){
       return(
         <div>
-          <div className="small-12 small-centered large-12 columns">
+          <div className="small-12 small-centered medium-12 large-12 columns">
             {charts}
           </div>
 
-          <div className="small-12 small-centered large-4 columns">
+          <div className="small-12 small-centered medium-8 large-4 columns">
             <FriendIndexComponent
               friends={this.state.friends}
               handleDeleteFriend ={this.handleDeleteFriend}
               handleFriendshipStats ={this.handleFriendshipStats}
             />
           </div>
-          <div className="small-12 small-centered large-4 columns">
+          <div className="small-12 small-centered medium-8 large-4 columns">
             {friendForm}
             <img onClick={handleFormToggle} src={add} alt="add a new friend"/>
           </div>
@@ -158,11 +155,8 @@ class DashboardPage extends Component {
 
     }else{
       return(
-        <div className="landing-page small-12 small-centered columns">
-          <LandingPageTile/>
-          <div id="header">
-            <img src={heart} alt="heart" />
-          </div>
+        <div className="small-12 small-centered medium-12 large-12 columns">
+          <img className="logo" src={heart_logo} alt="heart" />
         </div>
       )
     }

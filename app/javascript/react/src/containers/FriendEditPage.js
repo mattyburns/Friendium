@@ -133,7 +133,7 @@ class FriendEditPage extends Component {
     }
 
     return(
-      <div className="friend-edit-page">
+      <div className="friend-edit-page small-12 small-centered medium-8 large-4 columns">
 
         <form>
           <FormFieldTile
@@ -200,7 +200,7 @@ class FriendEditPage extends Component {
           />
           <input type="submit" className="button round" value="Save" onClick={handleSubmit} />
         </form>
-        
+
         <ControllsComponent/>
 
         <div>

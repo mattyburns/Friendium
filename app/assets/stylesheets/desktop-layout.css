@@ -1,14 +1,16 @@
-@media only screen and (min-device-width : 1200px) and (max-device-width : 5000px) {
+@media only screen and (min-device-width : 1200px){
+
+  .logo{
+    width:50%;
+    margin-left: 22em;
+    margin-top: 1em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+  }
 
   .getting-started{
     float: right;
-  }
-
-  .message{
-    color:white;
-    font-family: 'Kurale', serif;
-    margin-top: 10em;
-    margin-left: .5em;
   }
 
   .friend-tile{
@@ -22,7 +24,6 @@
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
   }
 
-
   .interaction-tile{
     float:auto;
     width: 100%;
@@ -33,19 +34,6 @@
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
   }
-
-  /*.stats-component{
-    right:0;
-    position: fixed;
-    width: 25%;
-    height: auto;
-    float:right;
-    padding: 30px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-  }*/
 
   #friend-form{
     font-family: 'Open Sans Condensed', arial, sans;
@@ -58,19 +46,6 @@
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
   }
 
-  .landing-page img{
-    position: absolute;
-    margin-top: 4.5em;
-    width: 100%;
-  }
-
-  .landing-page-tile{
-    z-index: 100;
-    position: absolute;
-    margin-top: 4.5em;
-    margin-left: 1.5em;
-    font-size: 1.5em;
-  }
 
   #instructions.message{
     margin-left: 1em;
