@@ -1,5 +1,4 @@
 import React from 'react'
-import GraphTile from './tiles/GraphTile'
 
 const StatsComponent = props => {
   let message;
