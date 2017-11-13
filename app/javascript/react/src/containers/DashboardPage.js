@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import FriendIndexComponent from '../components/FriendIndexComponent'
 import FriendFormContainer from './FriendFormContainer'
-import StatsComponent from '../components/StatsComponent'
 import GoogleCharts from './ChartsContainer'
 import add from '../components/images/add.png'
 import ControllsComponent from '../components/ControllsComponent'

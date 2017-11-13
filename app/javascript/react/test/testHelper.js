@@ -14,8 +14,6 @@ Object.assign(global, {
   React
 });
 
-
-
 beforeEach(() => {
   jasmineEnzyme();
 })
