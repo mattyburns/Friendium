@@ -1,7 +1,8 @@
 import ErrorsTile from '../src/components/tiles/ErrorsTile';
 
 describe('ErrorsTile', () => {
-  let wrapper;
+  let wrapper,
+      errors;
 
   beforeEach(() => {
     wrapper = mount(<ErrorsTile
