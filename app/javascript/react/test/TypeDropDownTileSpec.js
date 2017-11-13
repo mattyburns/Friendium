@@ -8,11 +8,12 @@ describe('TypeDropDownTile', () => {
       wrapper;
 
   beforeEach(() => {
-    wrapper = mount(<TypeDropDownTile
-      name="interactionType"
-      content="Package"
-      labelText="Interaction type:"
-                    />
+    wrapper = mount(
+      <TypeDropDownTile
+        name="interactionType"
+        content="Package"
+        labelText="Interaction type:"
+      />
     );
   });
 

@@ -5,9 +5,10 @@ describe('ErrorsTile', () => {
       errors;
 
   beforeEach(() => {
-    wrapper = mount(<ErrorsTile
-      errors={['error1', 'error2']}
-                    />)
+    wrapper = mount(
+      <ErrorsTile
+        errors={['error1', 'error2']}
+      />)
   });
 
   it('should render an li element for each error in props', () => {

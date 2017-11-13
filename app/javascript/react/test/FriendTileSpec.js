@@ -1,4 +1,4 @@
-import FriendTile from '../../src/components/tiles/FriendTile';
+import FriendTile from '../src/components/tiles/FriendTile';
 
 describe('FriendTile', () => {
   let fullName,

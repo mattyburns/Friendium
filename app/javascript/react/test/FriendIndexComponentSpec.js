@@ -8,6 +8,6 @@ describe('FriendIndexComponent', ( => {
   });
 
   it('should render a FriendTile', () => {
-    expect(wrapper.find(FriendTile)).toBePresent();
-  })
-}))
+    expect(wrapper.find('FriendTile')).toBePresent();
+  });
+}));
