@@ -12,7 +12,7 @@ class InteractionFormContainer extends Component {
     this.state = {
       interactionType: "",
       notes: "",
-      dateOfInteraction: moment() ,
+      dateOfInteraction: moment(),
       errors: ""
 
     }
