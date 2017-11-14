@@ -1,24 +1,18 @@
-# README
+# Friendium
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Friendium is a mobile-friendly relationship management app for recording notes on interactions with friends.
 
-Things you may want to cover:
+The goal of this project was to practice building a React/Rails app in two weeks...and to help me manage my friendships better :)
 
-* Ruby version
 
-* System dependencies
+More coming soon...
 
-* Configuration
+* Technologies
 
-* Database creation
+* Setup
 
-* Database initialization
+* Testing
 
-* How to run the test suite
+* ER Diagrams
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment
