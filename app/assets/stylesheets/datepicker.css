@@ -18,44 +18,6 @@
   left: 50px;
 }
 
-/* .react-datepicker-popper {
-  z-index: 1;
-
-  &[data-placement^="bottom"] {
-    margin-top: 8px + 2px;
-
-    .react-datepicker__triangle {
-      @extend %triangle-arrow-up;
-    }
-  }
-
-  &[data-placement^="top"] {
-    margin-bottom: 8px + 2px;
-
-    .react-datepicker__triangle {
-      @extend %triangle-arrow-down;
-    }
-  }
-
-  &[data-placement^="right"] {
-    margin-left: 8px;
-
-    .react-datepicker__triangle {
-      left: auto;
-      right: 42px;
-    }
-  }
-
-  &[data-placement^="left"] {
-    margin-right: 8px;
-
-    .react-datepicker__triangle {
-      left: 42px;
-      right: auto;
-    }
-  }
-} */
-
 .react-datepicker__header {
   text-align: center;
   background-color: #f0f0f0;
